@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<head>
+        <meta charset = "utf-8">
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <title>Featured Campuses</title>
+        <link href="style.css" rel="stylesheet" type="text/css"
+        />
+</head>
+
+<style>
+
+        #contact {
+                text-align: center;                
+
+
+        }
+        p.userInfo > label {
+                min-width: 200px;
+                display: inline-block;
+        }
+        #thanks {
+
+                display: none;
+        }
+
+        #north {
+                display: inline-block;
+                background-color: lightcoral;
+                border: 2px solid black;
+        }
+        #south {
+                display: none;
+                background-color: rgb(228, 129, 228);
+                border: 2px solid black;
+        }
+        #mid {
+                display: none;
+                background-color: lightsalmon;
+                border: 2px solid black;
+        }
+        #west {
+                display: none;
+                background-color: lightseagreen;
+                border: 2px solid black;
+        }
+        select {
+                background-color:#F7B040;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                /* border: 1px solid #ccc; */
+                border-radius: 5px;
+                /* width: 200px; */
+                /* height: 100px; */
+                font-size: 40px;
+                font-family: Arial, sans-serif;
+
+        }
+
+        ul.lists {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+               
+               
+        }
+        #overall {
+                text-align: center;
+        }
+        .areas {
+                display: inline-block;
+               
+
+        }
+        .section {
+                display: none;
+        }
+
+       
+
+</style>
+
+
+<body>
+
+        <header> 
+                <div id="container">
+                  <img src = "foodtruck.png" id = "logo" width="200" alt = "dog" style="float: left; margin-right: 20px;" />
+                  <h1> Food Trunk Frenzy!</h1> 
+                 <h2> The Best Bites Around!</h2> 
+                </div>
+            </header>
+              <nav>
+                <ul class="nav"> 
+                  <li>  <a href="index.html"> Home </a> </li>
+                  <li> <a href="about-us.html"> About Us </a></li>
+                  <li> <a href="mission.html">Mission </a></li>
+                  <li> <a href="menu.html"> Menu </a></li>
+                  <li> <a href="careers.html">Careers</a></li> 
+                  <li> <a href="hire-us.html">Hire us</a> </li>
+                  <li> <a href="campus.html">Campus </a></li>
+                </ul>
+              </nav>
+                <h2> Select Which Region You Would Like to See!</h2>
+       
+                <select id = "finder">
+                        <!-- what if we did a drop down where when you click a region
+                        it only displays certain ones
+                        all, northeast, south, midwest, west coast -->
+                        <option>Northeast</option>
+                        <option>South</option>
+                        <option>Midwest</option>
+                        <option>West Coast</option>
+                        <option>Display All</option>
+       
+                </select>
+       
+       
+<div id = "overall"> 
+        <br>
+        <div class = "areas" id = "north">
+                <ul class = "lists">
+                        <li class = "section "><h2>Northeast</h2></li>
+                        <li> Massachusetts Institute of Technology </li>
+                        <li> Boston University </li>
+                        <li> Tufts Univeristy </li>
+                        <li>Yale University </li>
+                        <li>      Wesleyan University </li>
+                        <li>     Connecticut College </li>
+                        <li>      Trinity College </li>
+                        <li>       University of Connecticut</li>
+                        <li>    Bowdoin College</li>
+                        <li>    Colby College</li>
+                        <li>    Bates College</li>
+                        <li>    University of Maine</li>
+
+                </ul>
+        </div>
+        <div class = "areas" id = "south">
+               <ul class = "lists">
+                <li class = "section "><h2>South</h2></li>
+                        <li> Vanderbilt University </li>
+                        <li> Duke University </li>
+                        <li> University of North Carolina at Chapel Hill </li>
+                        <li>University of Alabama</li>
+                        <li>Auburn University</li>
+                        <li>Samford University </li>
+                        <li>University of Alabama at Birmingham</li>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                       
+
+
+                       
+                </ul>
+        </div>
+        <div class = "areas" id = "mid">
+                <ul class = "lists">
+                        <li class = "section "> <h2>Midwest</h2></li>
+                        <li> University of Chicago </li>
+                        <li> Northwestern University </li>
+                        <li> Ohio State University </li>
+                        <li>University of Illinois at Urbana-Champaign</li>
+                        <li> Illinois Institute of Technology</li>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                       
+                </ul>
+        </div>
+        <div class = "areas" id = "west">
+                <ul class = "lists">
+                        <li class = "section "><h2>West Coast</h2></li>
+                        <li> Standford University </li>
+                        <li> University of California, Berkeley </li>
+                        <li> University of Arizona </li>
+                        <li>University of California, Los Angeles (UCLA)</li>
+                        <li>University of Southern California (USC)</li>
+                        <li>California Institute of Technology (Caltech)</li>
+                        <li>Claremont McKenna College</li>
+                        <li>Pomona College</li>
+                        <li>Harvey Mudd College</li>
+                        <li>Scripps College</li>
+                        <li>University of California, San Diego (UCSD)</li>
+                        <li>University of California, Santa Barbara (UCSB)</li>
+
+                       
+                       
+                </ul>
+        </div>
+</div>
+       
+       
+       
+
+
+</body>
+
+        <script>
+
+                menu = document.getElementById("finder");
+                menu.addEventListener("change", function () {
+                        console.log(menu.selectedIndex);
+                if (menu.selectedIndex == 0) {
+                        displayArea("north");
+                        hideArea("south");
+                        hideArea("mid");
+                        hideArea("west");
+                        labels = document.getElementsByClassName("section");
+                        for (let i = 0; i < labels.length; i++) {
+                                labels[i].style.display = "none";
+                        }
+
+                }
+                else if (menu.selectedIndex == 1) {
+                        displayArea("south");
+                        hideArea("north");
+                        hideArea("mid");
+                        hideArea("west");
+                        labels = document.getElementsByClassName("section");
+                        for (let i = 0; i < labels.length; i++) {
+                                labels[i].style.display = "none";
+                        }
+                       
+                }
+                else if (menu.selectedIndex == 2) {
+                        displayArea("mid");
+                        hideArea("south");
+                        hideArea("north");
+                        hideArea("west");
+                        labels = document.getElementsByClassName("section");
+                        for (let i = 0; i < labels.length; i++) {
+                                labels[i].style.display = "none";
+                        }
+                       
+                }
+                else if (menu.selectedIndex == 3) {
+                        displayArea("west");
+                        hideArea("south");
+                        hideArea("north");
+                        hideArea("mid");
+                        labels = document.getElementsByClassName("section");
+                        for (let i = 0; i < labels.length; i++) {
+                                labels[i].style.display = "none";
+                        }
+                       
+                }
+                else {
+                        displayArea("west");
+                        displayArea("north");
+                        displayArea("south");
+                        displayArea("mid");
+                        labels = document.getElementsByClassName("section");
+                        for (let i = 0; i < labels.length; i++) {
+                                labels[i].style.display = "block";
+                        }
+
+                       
+                }
+                })
+               
+
+        function displayArea(id) {
+                console.log("here");
+                console.log(id);
+                document.getElementById(id).style.display = "inline-block";
+
+        }
+
+        function hideArea(id) {
+                document.getElementById(id).style.display = "none";
+        }
+       
+
+               
+        </script>
+
+</html>

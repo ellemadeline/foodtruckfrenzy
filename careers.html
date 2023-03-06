@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Careers</title>
+        <meta charset = "utf-8">
+        <meta name = 'viewport'content="width=device-width,inital-scale=1">
+        <link rel ="stylesheet" href = "style.css">
+        <script src="actions.js"></script>
+
+        <style>
+            form {
+                margin: 5% 15%;
+                border: 2px solid black;
+                padding: 3%;
+                width: 70%;
+                background-color:goldenrod;
+                /* color: white; */
+            }
+            label {
+                font-weight: bold;
+                position: relative;
+            }
+            label.question {
+                margin-left: 30%;
+            }
+            label.long {
+                margin-left: 10%;
+            }
+            input.text {
+                position: absolute;
+                left: 50%;
+            }
+            input.buttons {
+                position: relative;
+                left: 0%;
+                margin-left: 5%;
+            }
+            p.formElement {
+                margin-top: 1%;
+            }
+            .req {
+                color: red;
+                position: absolute;
+            }
+            input#licenseN {
+                margin-left: 5%;
+            }
+            input#submit {
+                margin-left:45%;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+
+<body onload="setupPage()"> 
+    <header> 
+        <div id="container">
+          <img src = "foodtruck.png" id = "logo" width="200" alt = "dog" style="float: left; margin-right: 20px;" />
+          <h1> Food Trunk Frenzy!</h1> 
+         <h2> The Best Bites Around!</h2> 
+        </div>
+    </header>
+      <nav>
+        <ul class="nav"> 
+          <li>  <a href="index.html"> Home </a> </li>
+          <li> <a href="about-us.html"> About Us </a></li>
+          <li> <a href="mission.html">Mission </a></li>
+          <li> <a href="menu.html"> Menu </a></li>
+          <li> <a href="careers.html">Careers</a></li> 
+          <li> <a href="hire-us.html">Hire us</a> </li>
+          <li> <a href="campus.html">Campus </a></li>
+        </ul>
+      </nav>
+<!--
+  /end of nav and head styling -->
+    <h1 class="heading">Want to Work for Us?</h1>
+    <u><h2 class="heading">What You'd Do</h2></u>
+    <div class="dialogue">
+        <p>
+            As a Food Truck Frenzy worker, you have the great fun of exploring your
+            campus from the comfort of our very own FTF vans
+        </p>
+        <!-- Add image here -->
+        <br/>
+        Work includes the following:
+        <ol>
+            <li>
+                Making pizzas with our simple yet delicious recipe
+            </li>
+            <li>
+                Setting up shop around your campus to sell pizza to your peers
+            </li> 
+            <li>
+                Meeting the students from all across your school
+            </li>
+        </ol>
+    </div>
+    <u><h2 class="heading">What You Get</h2></u>
+    <div class="dialogue">
+        <p>
+            We offer a great experience with quality pay. Workers gain work experience,
+            with the added benefit of meeting and socializing with more students at their
+            school. In addition, employees gain quality cooking skills, which they can
+            use for the rest of their life. Not to mention the fun that our employees have
+            exploring their schools in a comfy van.
+        </p>
+    </div>
+    <u><h2 class="heading">Apply Now!</h2></u>
+    <div class="dialogue">
+        <p>
+            Apply now to join our Food Truck Frenzy family! Just fill out the form
+            below, and we'll get back to you!
+        </p>
+    </div>
+
+    <!-- Application -->
+    <form id="application">
+        <p class="formElement">
+            <label class="question">First Name:</label><span class="req">*</span>
+            <input type="text" class="text" id="fname" required/>
+        </p>
+        <p class="formElement">
+            <label class="question">Last Name:</label><span class="req">*</span>
+            <input type="text" class="text" id="lname" required/>
+        </p>
+        <p class="formElement">
+            <label class="question">Date of Birth:</label><span class="req">*</span>
+            <input type="date" class="text" id="dob" required/>
+        </p>
+        <p class="formElement">
+            <label class="question">Email:</label><span class="req">*</span>
+            <input type="text" class="text" id="email" required/>
+        </p>
+        <p class="formElement">
+            <label class="question">Phone Number:</label>
+            <input type="text" class="text" id="phone"/>
+        </p>
+        <p class="formElement">
+            <label class="question">Location to Work:</label><span class="req">*</span>
+            <input type="text" class="text" id="location" required/>
+        </p>
+        <br/>
+        <p class="formElement">
+            <label class="long">Do You Have A Valid Drivers License:</label><span class="req">*</span>
+            <input type="radio" class="buttons" id="licenseY" value="Yes" name="license" required/>
+            Yes
+            <input type="radio" class="buttons" id="licenseN" value="No" name="license" required/>
+            No
+        </p>
+        <br/>
+        <input type="submit" id="submit" />
+    </form>
+</body>
+</html>
+
+<!-- <style>
+
+</style> -->

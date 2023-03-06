@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<head>
+        <meta charset = "utf-8">
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hire Us!</title>
+        <link href="style.css" rel="stylesheet" type="text/css"
+        />
+</head>
+
+<style>
+
+        #contact {
+                text-align: center;                
+
+
+        }
+        p.userInfo > label {
+                min-width: 200px;
+                display: inline-block;
+                font-size: 30px;
+        }
+        #thanks {
+
+                display: none;
+        }
+        #sub {
+                        text-align: center;
+                        margin-left: auto;
+                        margin-right: auto;
+                        background-color: #F7B040;;
+                                color: black;
+                                padding: 15px 32px;
+                                text-align: center;
+                                text-decoration: none;
+                                font-size: 16px;
+                                border-bottom: 1px solid #666;
+                                border-left: 1px solid #666;
+                                border-top: 1px solid #666;
+                                border-right: 1px solid #666;
+                                margin: 0;
+        }
+        #info {
+                background-color: white;
+                display: block;
+                width: 40%;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+                border: 2px solid black;
+
+        }
+        input {
+                font-size: 20px;
+        }
+
+
+</style>
+
+
+<body>
+
+        <header> 
+                <div id="container">
+                  <img src = "foodtruck.png" id = "logo" width="200" alt = "dog" style="float: left; margin-right: 20px;" />
+                  <h1> Food Trunk Frenzy!</h1> 
+                 <h2> The Best Bites Around!</h2> 
+                </div>
+            </header>
+              <nav>
+                <ul class="nav"> 
+                  <li>  <a href="index.html"> Home </a> </li>
+                  <li> <a href="about-us.html"> About Us </a></li>
+                  <li> <a href="mission.html">Mission </a></li>
+                  <li> <a href="menu.html"> Menu </a></li>
+                  <li> <a href="careers.html">Careers</a></li> 
+                  <li> <a href="hire-us.html">Hire us</a> </li>
+                  <li> <a href="campus.html">Campus </a></li>
+                </ul>
+              </nav>
+        <div id = "contact">
+                <h2>Please fill in your contact information below!</h2>
+                <form>
+                        <div id = "info"> 
+                                <br>
+                        <p class="userInfo"><label>First Name*: </label> 
+                                <input type="text"  name='fname' value = ""/>
+                        </p>
+                        <p class="userInfo"><label>Last Name*: </label> 
+                                <input type="text"  name='lname' value = ""/>
+                        </p>
+                        <p class="userInfo address"><label>Campus*: </label> 
+                                <input type="text" name='street' value = ""/>
+                        </p>
+                        <p class="userInfo address"><label>City*: </label> 
+                                <input type="text" name='city' value = ""/>
+                        </p>
+                        <p class="userInfo address"><label>State*: </label> 
+                                <input type="text" name='state' value = ""/>
+                        </p>
+                        <p class="userInfo"><label>Phone*: </label> 
+                                <input type="text"  name="phone" value = ""/>
+                        </p>
+                        <br>
+                </div>
+                <br>
+                        <input type = "button" value = "Submit" id = "sub" />
+                </form>
+                <h1 id = "thanks" >Thank you for booking us! We will be in touch shortly!</h1>
+        </div>
+       
+
+
+</body>
+
+        <script>
+                types = document.getElementsByTagName("input");
+                states = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"];
+                stateAbbreviations = [
+  "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID",
+  "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS",
+  "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK",
+  "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV",
+  "WI", "WY"
+];
+                for (let i = 0; i < types.length; i++) {
+                        if (types[i].getAttribute("type") == "text") {
+                                types[i].addEventListener("change", function () {
+                                        types[i].setAttribute("value", types[i].value);
+                                })
+                        }
+                        if (types[i].getAttribute("type") == "button") {
+                               
+                                types[i].addEventListener("click", function () {
+                                        if (validate() == false) {
+                                                alert("sorry wrong info!");
+                                        }
+                                        else {
+                                                document.getElementById("thanks").style.display = "block";  
+                                        }
+                                       
+                                        })  
+
+                               
+                        }
+                }
+                function validate() {
+                        // check if input is valid
+                        checker = document.getElementsByTagName("input");
+                        for (let i = 0; i < checker.length; i++) {
+                                console.log(checker[i].value);
+                                if (checker[i].getAttribute("type") == "text") {
+                                        if (checker[i].value === "") {
+                                        console.log(checker[i].value);
+                                        return false;
+                                        }
+                                }
+                                if (checker[i].getAttribute("name") == "phone") {
+                                        regex = /\d/g; // matches one or more digits
+                                        digits = checker[i].getAttribute("value").match(regex);
+                                        count = digits ? digits.length : 0;
+                                        second = (count == 7 || count == 10);
+                                        if (second == false) {
+                                                return false;
+                                        }
+                                }
+                                if (checker[i].getAttribute("name") == "state") {
+                                        if (states.includes(checker[i].getAttribute("value")) == false && stateAbbreviations.includes(checker[i].getAttribute("value")) == false) {
+                                                return false;
+                                        }
+                                }
+                               
+                               
+                        }
+                        return true;
+
+                }
+
+               
+        </script>
+
+</html>
