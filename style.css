@@ -444,7 +444,12 @@ body {
     font-size: 5px;
 
   }
-
+  #hand{
+    width:100px;
+  }
+  #cafe{
+    width:100px;
+  }
 
 
 .heading {
