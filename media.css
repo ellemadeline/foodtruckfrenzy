@@ -9,6 +9,7 @@ header{
 }
 body{
   font-family: monospace;
+  background-color: red;
 }
 header #logo{
   float:left;
