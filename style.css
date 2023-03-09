@@ -161,3 +161,150 @@ a#toplink {
 a#toplink:hover {
   color: pink;
 }
+@media screen and(min-width:601px){
+/* header code */
+header{
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+  padding: 20px;
+}
+body{
+  font-family: monospace;
+}
+header #logo{
+  float:left;
+  top: 10px;
+  margin-left: 125px;
+  margin-right: 40px;
+}
+h1{
+  /* margin: 10; */
+  text-align: center;
+  font-family:monospace ;
+  font-size: 35px;
+}
+
+h2{
+    text-align: center;
+    font-weight: bold;
+    font-style:italic;
+    font-family:monospace ;
+  }
+div #container { 
+  text-align: right;
+}
+p{
+  font-family:monospace;
+}
+
+
+/* navigation bar */
+* {
+  box-sizing: border-box;
+}
+nav{
+  margin-top:10px;
+  /* display: flex; */
+}
+ul.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0%;
+  overflow: hidden;
+  background-color:#F7B040;
+  font-family:monospace;
+  font-size:5px;
+  width:100%;
+  border: .5px solid darkgoldenrod;
+}
+ul.nav li {
+  float: left;
+  border-right: .5px solid darkgoldenrod;
+  width:14.28%;
+}
+ul.nav li a {
+  display: block;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+ul.nav a:hover:not(.active) {
+  background-color:lightblue;
+}
+a.active {
+  background-color:violet;
+}
+
+/* general body */
+body {
+  font-size:5px;
+  /* margin: 0px;
+  padding: 0px; */
+  background-color:#BCE1DB;
+  background-image: url("background.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* used w33 schools to get this alignment working */
+.handcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  img {
+     
+  }
+  
+  .image {
+    margin-left: 5px;
+    flex-basis:40%
+  }
+  .imagecafe{
+    margin-right: 5px;
+    flex-basis: 70%;
+  }
+  
+  .handtext {
+    padding-left: 5px;
+  }
+  
+  .cafecontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cafetext{
+    margin-left: 5px;
+    padding-right: 5px;
+  }
+  .footerdiv{
+    width:100%;
+    height:100px;
+    background-color:white;
+    text-align: left;
+    font-family:monospace;
+    font-size: 5px;
+
+  }
+
+
+
+.heading {
+  margin-top: 6%;
+  margin-left: 5%;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.dialogue {
+    margin: 0% 10%;
+}
+.dialogue p {
+    text-align: justify;
+}
+  
+}
