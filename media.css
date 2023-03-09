@@ -9,7 +9,6 @@ header{
 }
 body{
   font-family: monospace;
-  background-color: red;
 }
 header #logo{
   float:left;
@@ -87,6 +86,9 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  
+    background-color: red;
+
 }
 
 /* used w33 schools to get this alignment working */
