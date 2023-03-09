@@ -143,3 +143,21 @@ body {
 .dialogue p {
     text-align: justify;
 }
+
+footer {
+  background-color: black;
+  border-top: 5px solid cadetblue;
+  /* color: */
+  font-size: 13px;
+  color: white;
+  text-align: center;
+  padding: 2% 0%;
+  margin-top: 4%;
+}
+a#toplink {
+  color: white;
+  font-size: 16px;
+}
+a#toplink:hover {
+  color: pink;
+}
