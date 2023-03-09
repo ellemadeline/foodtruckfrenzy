@@ -1,109 +1,91 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Mission</title>
-<meta charset = "utf-8">
-<meta name = 'viewport'content="width=device-width,inital-scale=1">
-  <link rel ="stylesheet" href = "style.css"/>
-   <link rel ="stylesheet" href = "media.css" media= "only screen and (max-device-width:600px)"/>
-<style>
-.rectangle {
-    background-color: silver;
-    background-image: url('f.jpg');
-    background-position: -100% 0;
-    background-repeat: no-repeat;
-    transition: background-position 1s ease-in-out;
-    border: 1px solid black;
-    padding: 20px;
-    margin-top: 20px;
-    margin-left: 40px;
-    margin-right: 40px;
-}
+	<script src="jquery.js"></script>
+	<script src="menuscript.js"></script>
+	<title>Mission</title>
+	<meta charset = "utf-8">
+	<meta name = 'viewport'content="width=device-width,inital-scale=1">
+	<link rel ="stylesheet" href = "style.css">
+	<style>
+		.rectangle {
+    		background-color: silver;
+    		background-image: url('menu_background.jpg');
+    		background-position: -100% 0;
+    		background-repeat: no-repeat;
+    		transition: background-position 1s ease-in-out;
+    		border: 1px solid black;
+    		padding: 20px;
+    		margin-top: 20px;
+    		margin-left: 40px;
+    		margin-right: 40px;
+    		position: relative;
+		}
+		.rectangle:hover {
+			background-position: 100% 40%;
+		}
 
-#pizza:hover {
-    background-position: 100% 55%;
-}
+		h3 {
+			font-family: monospace;
+			font-size: 20px;
+			text-align: center;
+		}
 
-#gyro:hover {
-background-position: 100% 61%;
-}
-
-#veggie:hover {
-    background-position: 100% 59.6%;
-}
-
-#onion:hover {
-    background-position: 100% 60%;
-}
-
-#melt:hover {
-    background-position: 100% 52%;
-}
-
-#turkey:hover {
-    background-position: 100% 56%;
-}
-
-#salad:hover {
-    background-position: 100% 55%;
-}
+		h4 {
+			font-family: monospace;
+			font-size: 15px;
+			text-align: center;
+		}
 
 
-</style>
+	</style>
 </head>
 
 <body> 
-<header> 
-    <div id="container">
-        <a href="index.html">
-            <img id = "logo" src = "foodtruck.png" width="200" alt = "dog" />
-        </a>
-      <h1> Food Trunk Frenzy!</h1> 
-     <h2 id="slogan"> The Best Bites Around!</h2> 
-    </div>
-</header>
-  <nav>
-    <ul class="nav"> 
-      <li>  <a href="index.html"> Home </a> </li>
-      <li> <a href="about-us.html"> About Us </a></li>
-      <li> <a href="mission.html">Mission </a></li>
-      <li> <a class="active" href="menu.html"> Menu </a></li>
-      <li> <a href="careers.html">Careers</a></li> 
-      <li> <a href="hire-us.html">Hire us</a> </li>
-      <li> <a href="campus.html">Campus </a></li>
-    </ul>
-  </nav>
+	<header> 
+		<img src = "foodtruck.png" id = "logo" width="200" alt = "dog" />
+		<h1> Food Trunk Frenzy!</h1> <br/>
+ 		<h2 id = "slogan"> The Best Bites Around!</h2> 
+	</header>
+	<nav>
+		<ul class="nav"> 
+		<li><a href="index.html"> Home </a> </li>
+		<li> <a href="about-us.html"> About Us </a></li>
+		<li> <a href="mission.html">Mission </a></li>
+		<li><a href="menu.html"> Menu </a></li>
+		<li><a href="careers.html">Careers</a></li> 
+		<li> <a href="hire-us.html">Hire us</a> </li>
+		<li> <a href="campus.html">Campus </a></li>
+	</ul>
+	</nav>
 
-<br>
-<div class="rectangle" id="pizza">
-<p>Slice of gluten-free pizza</p>
-</div>
-<div class="rectangle" id="gyro">
-<p>Beef Gyro</p>
-</div>
-<div class="rectangle" id="veggie">
-<p>Veggie Burger</p>
-</div>
-<div class="rectangle" id="onion">
-<p>Onion Rings</p>
-</div>
-<div class="rectangle" id="melt">
-<p>Chipolte Avacado Chicken Melt</p>
-</div>
-<div class="rectangle" id="turkey">
-<p>Turkey Cranberry Wrap</p>
-</div>
-<div class="rectangle" id="salad">
-<p>Southwest Chicken Salad</p>
-</div>
+	<h3><i>Menu prices depend on location. See options at local food truck</i></h3>
+	<h4>(We promise they're good)</h4>
+	
+	<div class="rectangle" id="pizza">
+		<p>Slice of gluten-free pizza (GF)</p>
+	</div>
+	<div class="rectangle" id="gyro">
+		<p>Beef Gyro (org.)</p>
+	</div>
+	<div class="rectangle" id="veggie">
+		<p>Veggie Burger (V)</p>
+	</div>
+	<div class="rectangle" id="onion">
+		<p>Onion Rings</p>
+	</div>
+	<div class="rectangle" id="melt">
+		<p>Chipolte Avacado Chicken Melt (org.) (GF)</p>
+	</div>
+	<div class="rectangle" id="turkey">
+		<p>Turkey Cranberry Wrap (org.) (GF)</p>
+	</div>
+	<div class="rectangle" id="salad">
+		<p>Mediterranean Salad (GF) (V) (org.)</p>
+	</div>
 
-<footer>
-    <p>Copyright @ 2023 Food Truck Frenzy</p>
-    <br/>
-    <img id = "logo" src = "foodtruck.png" width="100" alt = "dog" />
-    <br/>
-    <br/>
-    <a href="#top" id="toplink">BACK TO TOP</a>
-</footer>
+	<h3>(org.)100% Organic      (GF)Gluten Free      (V)Vegan</h3>
+
+
 </body>
 </html>
