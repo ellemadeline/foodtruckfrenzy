@@ -15,6 +15,7 @@ header #logo{
   top: 10px;
   margin-left: 125px;
   margin-right: 40px;
+  width= 200px;
 }
 h1{
   /* margin: 10; */
