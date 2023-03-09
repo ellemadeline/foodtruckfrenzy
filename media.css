@@ -15,8 +15,11 @@ header #logo{
   top: 10px;
   margin-left: 75px;
   margin-right: 25px;
-  width: 50px;
+ 
 }
+ img#logo {
+    width: 50px;
+  }
 h1{
   /* margin: 10; */
   text-align: center;
