@@ -27,7 +27,7 @@
             label.long {
                 margin-left: 10%;
             }
-            input.text {
+            .text {
                 position: absolute;
                 left: 50%;
                 width: 10%;
@@ -74,7 +74,7 @@
         </style>
     </head>
 
-<body onload="setupPage()"> 
+<body onload="makeSelect()"> 
     <header> 
         <div id="container">
             <a href="index.html">
@@ -138,7 +138,7 @@
     </div>
 
     <!-- Application -->
-    <form id="application">
+    <form id="application" onsubmit="return validateForm()">
         <p class="formElement">
             <label class="question">First Name:</label><span class="req">*</span>
             <input type="text" class="text" id="fname" required/>
@@ -161,7 +161,9 @@
         </p>
         <p class="formElement">
             <label class="question">Location to Work:</label><span class="req">*</span>
-            <input type="text" class="text" id="location" required/>
+            <select class="text" id="location" required>
+                <option disabled selected value>Pick a Location</option>
+            </select>
         </p>
         <br/>
         <p class="formElement">
