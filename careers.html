@@ -30,11 +30,13 @@
             input.text {
                 position: absolute;
                 left: 50%;
+                width: 10%;
             }
             input.buttons {
                 position: relative;
                 left: 0%;
-                margin-left: 5%;
+                /* margin-left: 2%; */
+                width: 10%;
             }
             p.formElement {
                 margin-top: 1%;
@@ -49,9 +51,25 @@
             input#submit {
                 margin-left:45%;
                 font-size: 20px;
+                width: 20%;
             }
             .heading{
                 font-family: monospace;
+            }
+
+            @media screen and (max-width: 700px) {
+                input.text {
+                    height: 10px;
+                    font-size: 5px;
+                }
+                input.buttons {
+                    height: 10px;
+                }
+                input#submit {
+                    height: 15px;
+                    font-size: 7px;
+                    padding: 0;
+                }
             }
         </style>
     </head>
@@ -60,10 +78,10 @@
     <header> 
         <div id="container">
             <a href="index.html">
-                <img id = "logo" src = "foodtruck.png" width="200" alt = "dog" />
+                <img id="logo" src = "foodtruck.png" alt = "dog" />
             </a>
           <h1> Food Trunk Frenzy!</h1> 
-         <h2 id="slogan"> The Best Bites Around!</h2> 
+         <h2 id="slogan">The Best Bites Around!</h2> 
         </div>
     </header>
       <nav>
@@ -86,7 +104,7 @@
             As a Food Truck Frenzy worker, you have the great fun of exploring your
             campus from the comfort of our very own FTF vans
         </p>
-        <!-- Add image here -->
+
         <br/>
         Work includes the following:
         <ol>
@@ -158,9 +176,9 @@
     </form>
     
     <footer>
-        <p>Copyright @ 2023 Food Truck Frenzy</p>
+        <p id="footerText">Copyright @ 2023 Food Truck Frenzy</p>
         <br/>
-        <img id = "logo" src = "foodtruck.png" width="100" alt = "dog" />
+        <img id="logo" src="foodtruck.png" alt="dog" />
         <br/>
         <br/>
         <a href="#top" id="toplink">BACK TO TOP</a>
