@@ -96,10 +96,6 @@ body {
     align-items: center;
     justify-content: center;
   }
-  img {
-     
-  }
-  
   .image {
     margin-left: 5px;
     flex-basis:40%
