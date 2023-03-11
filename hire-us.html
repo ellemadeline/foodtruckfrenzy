@@ -150,7 +150,7 @@
               </nav>
         <div id = "contact">
                 <h2>Please fill in your contact information below!</h2>
-                <form>
+                <form onsubmit="return validate()">
                         <div id = "info"> 
                                 <br>
                         <p class="userInfo"><label>First Name:</label> <span class="req">*</span>
@@ -174,7 +174,7 @@
                         <br>
                 </div>
                 <br>
-                        <input type = "button" value = "Submit" id = "sub" />
+                        <input type = "submit" value = "Submit" id = "sub" />
                 </form>
                 <h3 id = "thanks" >Thank you for booking us! We will be in touch shortly!</h3>
         </div>
@@ -206,20 +206,20 @@
                                         types[i].setAttribute("value", types[i].value);
                                 })
                         }
-                        if (types[i].getAttribute("type") == "button") {
+                        // if (types[i].getAttribute("type") == "button") {
                                
-                                types[i].addEventListener("click", function () {
-                                        if (validate() == false) {
-                                                alert("Invalid information. Please make sure you fill in each required field and verify that you input a valid phone number and state.");
-                                        }
-                                        else {
-                                                document.getElementById("thanks").style.display = "block";  
-                                        }
+                        //         types[i].addEventListener("click", function () {
+                        //                 if (validate() == false) {
+                        //                         alert("Invalid information. Please make sure you fill in each required field and verify that you input a valid phone number and state.");
+                        //                 }
+                        //                 else {
+                        //                         document.getElementById("thanks").style.display = "block";  
+                        //                 }
                                        
-                                        })  
+                        //                 })  
 
                                
-                        }
+                        // }
                 }
                 function validate() {
                         // check if input is valid
@@ -229,6 +229,7 @@
                                 if (checker[i].getAttribute("type") == "text") {
                                         if (checker[i].value === "") {
                                         console.log(checker[i].value);
+                                        alert("Invalid information. Please make sure you fill in each required field and verify that you input a valid phone number and state.");
                                         return false;
                                         }
                                 }
@@ -238,18 +239,21 @@
                                         count = digits ? digits.length : 0;
                                         second = (count == 7 || count == 10);
                                         if (second == false) {
+                                                alert("Invalid information. Please make sure you fill in each required field and verify that you input a valid phone number and state.");
                                                 return false;
                                         }
                                 }
                                 if (checker[i].getAttribute("name") == "state") {
                                         if (states.includes(checker[i].getAttribute("value")) == false && stateAbbreviations.includes(checker[i].getAttribute("value")) == false) {
+                                                alert("Invalid information. Please make sure you fill in each required field and verify that you input a valid phone number and state.");
                                                 return false;
                                         }
                                 }
                                
                                
                         }
-                        return true;
+                        document.getElementById("thanks").style.display = "block";
+                        return false;
 
                 }
 
