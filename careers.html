@@ -9,7 +9,7 @@
         <script src="actions.js"></script>
 
         <style>
-            form {
+                        form {
                 margin: 5% 15%;
                 border: 2px solid black;
                 padding: 3%;
@@ -56,7 +56,11 @@
             .heading{
                 font-family: monospace;
             }
-
+            @media screen and (max-width: 900px) {
+                label.question {
+                    margin-left: 0%;
+                }
+            }
             @media screen and (max-width: 700px) {
                 .text {
                     height: 10px;
@@ -69,6 +73,14 @@
                     height: 15px;
                     font-size: 7px;
                     padding: 0;
+                }
+                label.question {
+                    margin-left: 20%;
+                }
+            }
+            @media screen and (max-width: 500px) {
+                label.question {
+                    margin-left: 0%;
                 }
             }
         </style>
