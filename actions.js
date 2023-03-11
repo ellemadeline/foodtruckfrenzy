@@ -13,9 +13,10 @@ function submitForm() {
 }
 
 function validateForm() {
-    // Validate phone number if given
-    var phoneLength = document.getElementById("phone").value.replace(/\D/g, '').length;
-	if (phoneLength != 7 && phoneLength != 10 && phoneLength != 0) {
+	// Validate phone number if given
+	var phoneInput = document.getElementById("phone").value;
+	var phoneLength = phoneInput.replace(/\D/g, '').length;
+	if (phoneLength != 7 && phoneLength != 10 && phoneInput.length != 0) {
 		alert("Improper Phone Number");
 		return false;
 	}
