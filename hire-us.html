@@ -9,35 +9,25 @@
 
 <style>
       
-        .up {
-                float: right;
-                margin-right: 10px;
-            
-        }
         .req {
                 color: red;
         }
 
-        #contact {
-                     text-align: center;
-                    
-                        
+         #contact {
+                text-align: center;                
 
         }
         p.userInfo > label {
-                display: inline-block;
+		min-width: 250px;
+		display: inline-block;
                 font-size: 27px;
-        }
-       
+	}
         #thanks {
 
                 display: none;
-                text-align: center;
-                margin-left: auto;
-                margin-right: auto;
         }
         #sub {
-                       text-align: center;
+                        text-align: center;
                         margin-left: auto;
                         margin-right: auto;
                         background-color: #F7B040;;
@@ -45,64 +35,45 @@
                                 padding: 15px 32px;
                                 text-align: center;
                                 text-decoration: none;
-                                font-size: 10px;
+                                font-size: 16px;
                                 border-bottom: 1px solid #666;
                                 border-left: 1px solid #666;
                                 border-top: 1px solid #666;
                                 border-right: 1px solid #666;
                                 margin: 0;
-                        font-family: monospace;
-                     
         }
         #info {
-                background-color: #F7B040;
+                 background-color: #F7B040;
                 display: block;
                 width: 40%;
                 text-align: center;
                 margin-left: auto;
                 margin-right: auto;
-/*                 border: 2px solid black;
- */
+                border: 2px solid black;
+
         }
         input {
-                font-size: 27px;
-        }
-        
-        label {
-                margin-left: 10px;
-               float: left;
-                
+                font-size: 20px;
         }
 @media (max-width: 700px) {
         
-        
-        
-        .up {
-                float: right;
-                margin-right: 2px;
-            
-        }
-        
+       
         .req {
                 color: red;
-                
-              }
-        #contact {
-                text-align: center;
+        }
 
+         #contact {
+                text-align: center;                
 
         }
         p.userInfo > label {
-               
-                display: inline-block;
-                font-size: 10px;
-        }
+		min-width: 100px;
+		display: inline-block;
+                font-size: 11px;
+	}
         #thanks {
 
                 display: none;
-                text-align: center;
-                margin-left: auto;
-                margin-right: auto;
         }
         #sub {
                         text-align: center;
@@ -119,30 +90,19 @@
                                 border-top: 1px solid #666;
                                 border-right: 1px solid #666;
                                 margin: 0;
-                        font-family: monospace;
         }
         #info {
-                background-color: #F7B040;
+                 background-color: #F7B040;
                 display: block;
                 width: 40%;
                 text-align: center;
                 margin-left: auto;
                 margin-right: auto;
-                border: 2px solid black;
+                border: 1px solid black;
 
         }
         input {
-                font-size: 10px;
-        }
-        
-        label {
-                 margin-left: 2px;
-               float: left;
-                
-        }
-
-        
-        
+                font-size: 11px;
         }
 
 </style>
@@ -175,22 +135,22 @@
                 <form onsubmit="return validate()">
                         <div id = "info"> 
                                 <br>
-                        <p class="userInfo"><label>First Name: <span class="req">*</span></label> 
+                        <p class="userInfo"><label>First Name: </label> <span class="req">*</span>
                                 <input type="text"  name='fname' value = "" class = "up" required/> 
                         </p>
-                        <p class="userInfo"><label>Last Name: <span class="req">*</span></label> 
+                        <p class="userInfo"><label>Last Name: </label> <span class="req">*</span>
                                 <input type="text"  name='lname' value = "" class = "up" required/>
                         </p>
-                        <p class="userInfo address"><label>Campus: <span class="req">*</span> </label>
+                        <p class="userInfo address"><label>Campus:</label> <span class="req">*</span>
                                 <input type="text" name='street' value = "" class = "up" required/> 
                         </p>
-                        <p class="userInfo address"><label>City: <span class="req">*</span> </label> 
+                        <p class="userInfo address"><label>City:</label> <span class="req">*</span>
                                 <input type="text" name='city' value = "" class = "up" required /> 
                         </p>
-                        <p class="userInfo address"><label>State: <span class="req">*</span> </label>
+                        <p class="userInfo address"><label>State:</label> <span class="req">*</span>
                                 <input type="text" name='state' value = "" class = "up" required /> 
                         </p>
-                        <p class="userInfo"><label>Phone: <span class="req">*</span> </label> 
+                        <p class="userInfo"><label>Phone: </label> <span class="req">*</span>
                                 <input type="text"  name="phone" value = "" class = "up" required /> 
                         </p>
                         <br>
