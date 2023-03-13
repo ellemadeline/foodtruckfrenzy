@@ -8,12 +8,10 @@
 </head>
 
 <style>
-        label {
-               margin-left: 10px;
-               float: left;
-        }
+      
         .up {
                 float: right;
+                margin-right: 10px;
             
         }
         .req {
@@ -26,6 +24,11 @@
         p.userInfo > label {
                 display: inline-block;
                 font-size: 27px;
+        }
+        p.userInfo {
+                
+                margin-left: 10px;
+               float: left;
         }
         #thanks {
 
@@ -67,12 +70,14 @@
 @media (max-width: 700px) {
         
         
-        label {
-               margin-left: 10px;
+        p.userInfo {
+                
+               margin-left: 2px;
                float: left;
         }
         .up {
                 float: right;
+                margin-right: 2px;
             
         }
         
@@ -163,22 +168,22 @@
                         <div id = "info"> 
                                 <br>
                         <p class="userInfo"><label>First Name:</label> <span class="req">*</span>
-                                <input type="text"  name='fname' value = "" class = "up" required style="margin-right: 10px;"/> 
+                                <input type="text"  name='fname' value = "" class = "up" required/> 
                         </p>
                         <p class="userInfo"><label>Last Name:</label> <span class="req">*</span>
-                                <input type="text"  name='lname' value = "" class = "up" required style="margin-right: 10px;"/>
+                                <input type="text"  name='lname' value = "" class = "up" required/>
                         </p>
                         <p class="userInfo address"><label>Campus:</label> <span class="req">*</span>
-                                <input type="text" name='street' value = "" class = "up" required style="margin-right: 10px;"/> 
+                                <input type="text" name='street' value = "" class = "up" required/> 
                         </p>
                         <p class="userInfo address"><label>City:</label> <span class="req">*</span>
-                                <input type="text" name='city' value = "" class = "up" required style="margin-right: 10px;"/> 
+                                <input type="text" name='city' value = "" class = "up" required /> 
                         </p>
                         <p class="userInfo address"><label>State:</label> <span class="req">*</span>
-                                <input type="text" name='state' value = "" class = "up" required style="margin-right: 10px;"/> 
+                                <input type="text" name='state' value = "" class = "up" required /> 
                         </p>
                         <p class="userInfo"><label>Phone:</label> <span class="req">*</span>
-                                <input type="text"  name="phone" value = "" class = "up" required style="margin-right: 10px;"/> 
+                                <input type="text"  name="phone" value = "" class = "up" required /> 
                         </p>
                         <br>
                 </div>
